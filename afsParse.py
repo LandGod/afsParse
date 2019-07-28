@@ -51,38 +51,3 @@ with open('test.csv', newline='') as csvfile:
         print("""<h3>\n\t{title}\n</h3>\n<p>\n\t{category}<br>\n\t{location}<br>\n\t{date}<br>\n\t{startTime}-{endTime}\n</p>\n<p>\n\t{description}\n</p>\n<p>\n\t<a href=\"{link}\">\n\t\tRegister\n\t</a>\n</p>""".format(title=title, category=category, location=location, date=date, startTime=startTime, endTime=endTime, description=description, parsedTitle=parsedTitle, link=link))
         
         print('\n-------------------------------------------------\n')
-
-
-
-## For reference
-    # for row in reader:
-    #     if row['Start Date'] != '':
-    #         print(row['Start Date'])
-
-
-
-## Old parsing file I made a while ago, here for reference: 
-
-# old_list = open('test.csv', 'r')
-# new_list = open('parsedInfo.txt', 'w')
-
-
-# pattern = re.compile(r"[a-z]{4,}\s")
-# new_list.write('[')
-# timer = 15
-# for line in old_list:
-#     theWord = pattern.search(line)
-#     if (not theWord):
-#         print('Nope')
-#         print("Continuing")
-#         continue
-#     new_list.write("\"" + theWord.group(0).strip() + "\", ")
-#     timer = timer - 1
-#     if timer < 1:
-#         new_list.write("\n")
-#         timer = 15
-
-
-# new_list.write(']')
-# old_list.close()
-# new_list.close()

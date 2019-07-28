@@ -1,25 +1,45 @@
-import re
+import re  # Regular expression library, possibly not needed.
+import csv  # CSV Parsing Librayr
 
-old_list = open('wordlist.txt', 'r')
-new_list = open('parsedWordList.txt', 'w')
-
-
-pattern = re.compile(r"[a-z]{4,}\s")
-new_list.write('[')
-timer = 15
-for line in old_list:
-    theWord = pattern.search(line)
-    if (not theWord):
-        print('Nope')
-        print("Continuing")
-        continue
-    new_list.write("\"" + theWord.group(0).strip() + "\", ")
-    timer = timer - 1
-    if timer < 1:
-        new_list.write("\n")
-        timer = 15
+# Open csv file called test.csv and create a dictionary of data based off of the given field names
+# Note that each Field name entry will include all cells up and down from the title, inclusive of the title, until the end of the document, so 
+# we must take care to ignore data we don't need
+# TODO: Handle grabbing a file not called test.csv
+with open('test.csv', newline='') as csvfile:
+    reader = csv.DictReader(csvfile, fieldnames=['Category*','Title','Description', 'CEUs', 'Start Date', 'End Date', 'Start Time', 'End Time', 'Location*', 'Sponsoring Agency*'])
 
 
-new_list.write(']')
-old_list.close()
-new_list.close()
+
+
+## For reference
+    # for row in reader:
+    #     if row['Start Date'] != '':
+    #         print(row['Start Date'])
+
+
+
+## Old parsing file I made a while ago, here for reference: 
+
+# old_list = open('test.csv', 'r')
+# new_list = open('parsedInfo.txt', 'w')
+
+
+# pattern = re.compile(r"[a-z]{4,}\s")
+# new_list.write('[')
+# timer = 15
+# for line in old_list:
+#     theWord = pattern.search(line)
+#     if (not theWord):
+#         print('Nope')
+#         print("Continuing")
+#         continue
+#     new_list.write("\"" + theWord.group(0).strip() + "\", ")
+#     timer = timer - 1
+#     if timer < 1:
+#         new_list.write("\n")
+#         timer = 15
+
+
+# new_list.write(']')
+# old_list.close()
+# new_list.close()

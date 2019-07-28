@@ -1,5 +1,28 @@
 import re  # Regular expression library, possibly not needed.
-import csv  # CSV Parsing Librayr
+import csv  # CSV Parsing Library
+
+'''
+Example of output format:
+<div>
+    <h3>
+        Title
+    </h3>
+    <p>
+        Category* <br>
+        Location* <br> 
+        Start Date <br> 
+        Start Time – End Time
+     </p>
+     <p>
+        Description
+     </p>
+     <p>
+        <a href="https://fostercaretraining.org/registration/?course_email=aevans@afs4kids.org&amp;course_title=HTMLCOMLIANTFORMATTEDTITLE&amp;course_date=STARTDATE&amp;course_location=LOCATION">
+            Register
+        </a>
+    </p>
+</div>
+'''
 
 # Open csv file called test.csv and create a dictionary of data based off of the given field names
 # Note that each Field name entry will include all cells up and down from the title, inclusive of the title, until the end of the document, so 

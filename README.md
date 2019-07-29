@@ -9,6 +9,9 @@ In order to properly use this applicaiton, users must have some version of Pytho
 6. If the 'pyperclip' module is not installed on your machine, then the program will automatically install it before proceeding in order to allow the advanced clipboard featur
 7. Results will be displayed in the terminal window where they can be copied. Additionally, all results will also be automatically coppied to your clipboard. If you prefer to copy/paste out of the terminal window, then you can just go ahead and do that. If you don't like doing that, then simply open a new, blank, text document, and click paste, which will paste in the entire output of the program (assuming you haven't coppied something else since running it).
 
+### No Console Mode
+You can also simply double click the application file in order to run the application in 'quick mode' without using the terminal at all. In this mode, when the program has finished, the terminal window will close imediately. You'll then have all the output coppied to your clipboard and will need to paste it into a text document so that you can then copy/paste the individual chuncks of text.
+
 If anything goes wrong, the program will crash and you can simply go back to step 2 and try again. The most likely cause for a crash is supplying an incompatible file type. Make sure that the file you're trying to use is a .csv file.
 
 For technical support please contact Daniel Gold - DanielJasonGold@gmail.com

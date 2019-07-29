@@ -90,7 +90,7 @@ with open(filename, newline='') as csvfile:
         # We'll also add the same thing to our allResults string so that we can output everything to the clipboard at once.
         # Not that for this, we're swapping all of our \n characters for \r\n, so that if this gets pasted into notepad the newlines are actually recognized.
         # That wasn't necessary for the terminal output as \n should be recognized there.
-        allResults += """<h3>\r\n\t{title}\r\n</h3>\r\n<p>\r\n\t{category}<br>\r\n\t{location}<br>\r\n\t{date}<br>\r\n\t{startTime}-{endTime}\r\n</p>\r\n<p>\r\n\t{description}\r\n</p>\r\n<p>\r\n\t<a href=\"{link}\">Register</a>\r\n</p>""".format(title=title, category=category, location=location, date=date, startTime=startTime, endTime=endTime, description=description, parsedTitle=parsedTitle, link=link)
+        allResults += """<h3>\r\n\t{title}\r\n</h3>\r\n<p>\r\n\t{category}<br>\r\n\t{location}<br>\r\n\t{date}<br>\r\n\t{startTime} - {endTime}\r\n</p>\r\n<p>\r\n\t{description}\r\n</p>\r\n<p>\r\n\t<a href=\"{link}\">Register</a>\r\n</p>""".format(title=title, category=category, location=location, date=date, startTime=startTime, endTime=endTime, description=description, parsedTitle=parsedTitle, link=link)
         allResults += '\r\n-------------------------------------------------\r\n'
         
     

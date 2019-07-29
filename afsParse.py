@@ -96,3 +96,6 @@ with open(filename, newline='') as csvfile:
     
     # Once we're done, copy all data to the clipboard using pyperclip
     pyperclip.copy(allResults)
+
+    # Keep terminal window open after program is finished, even if program not run from terminal
+    input('Press [enter] to exit program...\n')

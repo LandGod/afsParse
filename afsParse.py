@@ -84,13 +84,13 @@ with open(filename, newline='') as csvfile:
         # Finally, create a bunch of html tags with the relevent data dropped in. I've also added lots of newline and tab characters.
         # While not actually necessary to the needs of the end user, I think they will non the less appreciate actually being able to read the output 
         # We'll also throw in a line break between each set of event html tags so they can be easily distinguished from eachother
-        print("""<h3>\n\t{title}\n</h3>\n<p>\n\t{category}<br>\n\t{location}<br>\n\t{date}<br>\n\t{startTime}-{endTime}\n</p>\n<p>\n\t{description}\n</p>\n<p>\n\t<a href=\"{link}\">\n\t\tRegister\n\t</a>\n</p>""".format(title=title, category=category, location=location, date=date, startTime=startTime, endTime=endTime, description=description, parsedTitle=parsedTitle, link=link))
+        print("""<h3>\n\t{title}\n</h3>\n<p>\n\t{category}<br>\n\t{location}<br>\n\t{date}<br>\n\t{startTime} - {endTime}\n</p>\n<p>\n\t{description}\n</p>\n<p>\n\t<a href=\"{link}\">Register</a>\n</p>""".format(title=title, category=category, location=location, date=date, startTime=startTime, endTime=endTime, description=description, parsedTitle=parsedTitle, link=link))
         print('\n-------------------------------------------------\n')
 
         # We'll also add the same thing to our allResults string so that we can output everything to the clipboard at once.
         # Not that for this, we're swapping all of our \n characters for \r\n, so that if this gets pasted into notepad the newlines are actually recognized.
         # That wasn't necessary for the terminal output as \n should be recognized there.
-        allResults += """<h3>\r\n\t{title}\r\n</h3>\r\n<p>\r\n\t{category}<br>\r\n\t{location}<br>\r\n\t{date}<br>\r\n\t{startTime}-{endTime}\r\n</p>\r\n<p>\r\n\t{description}\r\n</p>\r\n<p>\r\n\t<a href=\"{link}\">\r\n\t\tRegister\r\n\t</a>\r\n</p>""".format(title=title, category=category, location=location, date=date, startTime=startTime, endTime=endTime, description=description, parsedTitle=parsedTitle, link=link)
+        allResults += """<h3>\r\n\t{title}\r\n</h3>\r\n<p>\r\n\t{category}<br>\r\n\t{location}<br>\r\n\t{date}<br>\r\n\t{startTime}-{endTime}\r\n</p>\r\n<p>\r\n\t{description}\r\n</p>\r\n<p>\r\n\t<a href=\"{link}\">Register</a>\r\n</p>""".format(title=title, category=category, location=location, date=date, startTime=startTime, endTime=endTime, description=description, parsedTitle=parsedTitle, link=link)
         allResults += '\r\n-------------------------------------------------\r\n'
         
     

@@ -9,7 +9,8 @@ In order to properly use this applicaiton, users must have some version of Pytho
 3. If the spreadsheet file that you would like to use is in the same folder, you may supply the file name as an aditional argument. EG: 'python afsParse.py myfile.csv`
 4. Whether or not you've supplied a file name, press enter.
 5. If you did not supply a file name, you will be prompted to select the spreadsheet file you'd like to use via a file explorer GUI.
-6. Results will be displayed in the terminal window where they can be copied.
+6. If the 'pyperclip' module is not installed on your machine, then the program will automatically install it before proceeding in order to allow the advanced clipboard featur
+7. Results will be displayed in the terminal window where they can be copied. Additionally, all results will also be automatically coppied to your clipboard. If you prefer to copy/paste out of the terminal window, then you can just go ahead and do that. If you don't like doing that, then simply open a new, blank, text document, and click paste, which will paste in the entire output of the program (assuming you haven't coppied something else since running it).
 
 If anything goes wrong, the program will crash and you can simply go back to step 2 and try again. The most likely cause for a crash is supplying an incompatible file type. Make sure that the file you're trying to use is a .csv file.
 

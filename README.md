@@ -1,6 +1,6 @@
 # AFS Parse Instructions
 
-WARNING: At this time only .csv spreadsheet files useable with this applicaiton. Support for .xls and .xlsx files is planned but has not yet been implemented.
+WARNING: At this time only .csv spreadsheet files useable with this applicaiton. Support for .xls and .xlsx files is planned but is currently not working due to a bug.
 
 In order to properly use this applicaiton, users must have some version of Python 3 installed on their machine. It is also recomended that python is added to the user's PATH for easy operation of the program via command prompt. It is also recomended that the user install a terminal applicaiton that allows easy copy/pasting of data, such as git BASH.
 

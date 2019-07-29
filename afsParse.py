@@ -49,25 +49,16 @@ except(IndexError):
     filename = askopenfilename() # show an "Open" dialog box and return the path to the selected file
 
 # Check file type
-if filename[-4:] == '.csv':
-    fileType = False
-elif filename[-4:] == '.xls':
-    fileType = True
-elif filename[-5:] == '.xlsx':
-    fileType = True
-else:
-    raise TypeError('Incorrect file type! Filetype must be: csv, xls, or xlsx')
+if filename[-4:] != '.csv':
+    raise TypeError('Incorrect file type! Filetype must be: .csv')
 
 # Open csv file called test.csv and create a dictionary of data based off of the given field names
 # Note that each Field name entry will include all cells up and down from the title, inclusive of the title, until the end of the document, so 
 # we must take care to ignore data we don't need
 with open(filename, newline='') as csvfile:
 
-    # If excel file supply the optional dialect argument and set it to 'excel' else, for csv file, no argument to dialect
-    if fileType:
-        reader = csv.DictReader(csvfile, fieldnames=['Category*','Title','Description', 'CEUs', 'Start Date', 'End Date', 'Start Time', 'End Time', 'Location*', 'Sponsoring Agency*'], dialect='excel')
-    else:
-        reader = csv.DictReader(csvfile, fieldnames=['Category*','Title','Description', 'CEUs', 'Start Date', 'End Date', 'Start Time', 'End Time', 'Location*', 'Sponsoring Agency*'])
+    # Generate csv dictionary for each row based on supplied column headings. Returns iterable full of dictionaries. 
+    reader = csv.DictReader(csvfile, fieldnames=['Category*','Title','Description', 'CEUs', 'Start Date', 'End Date', 'Start Time', 'End Time', 'Location*', 'Sponsoring Agency*'])
 
 
     allResults =''

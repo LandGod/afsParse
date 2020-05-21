@@ -19,7 +19,7 @@ from tkinter import Tk
 from tkinter.filedialog import askopenfilename
 
 
-# Output should look like this:
+# Output should be in this format:
 # <div>
 #     <h3>
 #         Title

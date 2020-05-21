@@ -8,12 +8,12 @@ Note that many of the design desitions for the program were made due to the spec
 
 # Operation Instructions
 
-### Before First Use
+### Before First Use 
 * In order to properly use this applicaiton, users must have some version of Python 3 installed on their machine. 
 * It is also recomended that python is added to the user's PATH for easy operation of the program via command prompt. 
 * It is further recomended that the user install a terminal applicaiton that allows easy copy/pasting of data, such as git BASH.
 
-### Operation
+### Operation 
 1. Open the folder containing the afsParse.py application using the terminal of your choice. (If using git BASH, you can simply right click on the folder in the Windows Explorer and select 'Git Bash here from the dropdown menu.)
 2. Type the following command: 'python afsParse.py`
 3. If the csv file that you would like to use is in the same folder, you may supply the file name as an aditional argument. EG: 'python afsParse.py myfile.csv`
@@ -23,4 +23,4 @@ Note that many of the design desitions for the program were made due to the spec
 7. Results will be displayed in the terminal window where they can be copied. Additionally, all results will also be automatically coppied to your clipboard. If you prefer to copy/paste out of the terminal window, then you can just go ahead and do that. If you don't like doing that, then simply open a new, blank, text document, and click paste, which will paste in the entire output of the program (assuming you haven't coppied something else since running it).
 
 
-For technical support please contact Daniel Gold - DanielJasonGold@gmail.com
+For technical support please contact Daniel Gold - DanielJasonGold@gmail.com 
